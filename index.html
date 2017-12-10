@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
 </head>
 # HTML + Javascript Exercise
 
@@ -12,68 +12,68 @@
 
 - **Javascript**
 
-	1. What are the differences between a variable that is: `null`, `undefined`?
-		+ Undefined có nghĩa là không xác định. Trong javascript, khi bạn khai báo một biến nhưng chưa gán giá trị cho nó, giá trị của biến đó sẽ là undefined
-		+ Null có nghĩa là giá trị rỗng hoặc giá trị không tồn tại, nó có thể được sử dụng để gán cho một biến như là một đại diện không có giá trị..
+  1. What are the differences between a variable that is: `null`, `undefined`?
+    + Undefined có nghĩa là không xác định. Trong javascript, khi bạn khai báo một biến nhưng chưa gán giá trị cho nó, giá trị của biến đó sẽ là undefined
+    + Null có nghĩa là giá trị rỗng hoặc giá trị không tồn tại, nó có thể được sử dụng để gán cho một biến như là một đại diện không có giá trị..
 
-	2. What is `use strict`? what are the advantages and disadvantages to using it?
-		+ Use strict là từ khóa khai báo sử dụng chế độ Strict Mode, nghĩa là nếu bạn muốn sử dụng chế độ Strict Mode ở đâu thì chỉ việc đặt từ khóa "use strict" ở đó. Chế độ Strict Mode có hai phạm vi sử dụng đó là toàn cục và cục bộ. Tính toàn cục tức là khi bạn đặt từ "use strict" ở ngoài hàm và nằm phía trên cùng của file thì lúc này tất cả các đoạn code bên dưới đều bị ảnh hưởng. Tính cục bộ tức là bạn đặt "use strict" nằm trong một hàm nào đó thì phạm vi ảnh hưởng chỉ nằm trong hàm đó mà thôi.
-		+Advantages:
-		Nó sẽ bắt lỗi mã hoá thông thường, sẽ ném ngoại lệ.
-		Nó sẽ hiển thị, cho chúng ta biết và vô hiệu hóa các tính năng được mã hoá kém.
-		+Disadvantages:
-		Nó sẽ không cho phép chúng ta sử dụng câu lệnh "with". Điều này sẽ gây ra các vấn đề về bảo mật và hiệu suất.
-		Nó sẽ không cho phép chúng ta sử dụng thuộc tính "arguments.caller", do mối quan tâm về bảo mậtChúng tôi không có sự thay thế đối với thuộc tính này, nhưng chúng ta có thể mã hóa một tham số bổ sung
+  2. What is `use strict`? what are the advantages and disadvantages to using it?
+    Use strict là từ khóa khai báo sử dụng chế độ Strict Mode, nghĩa là nếu bạn muốn sử dụng chế độ Strict Mode ở đâu thì chỉ việc đặt từ khóa "use strict" ở đó. Chế độ Strict Mode có hai phạm vi sử dụng đó là toàn cục và cục bộ. Tính toàn cục tức là khi bạn đặt từ "use strict" ở ngoài hàm và nằm phía trên cùng của file thì lúc này tất cả các đoạn code bên dưới đều bị ảnh hưởng. Tính cục bộ tức là bạn đặt "use strict" nằm trong một hàm nào đó thì phạm vi ảnh hưởng chỉ nằm trong hàm đó mà thôi.
+    +Advantages:
+    Nó sẽ bắt lỗi mã hoá thông thường, sẽ ném ngoại lệ.
+    Nó sẽ hiển thị, cho chúng ta biết và vô hiệu hóa các tính năng được mã hoá kém.
+    +Disadvantages:
+    Nó sẽ không cho phép chúng ta sử dụng câu lệnh "with". Điều này sẽ gây ra các vấn đề về bảo mật và hiệu suất.
+    Nó sẽ không cho phép chúng ta sử dụng thuộc tính "arguments.caller", do mối quan tâm về bảo mậtChúng tôi không có sự thay thế đối với thuộc tính này, nhưng chúng ta có thể mã hóa một tham số bổ sung
 
-
-	3. What are the differences between `==` and `===`?
-		+ Khác nhau ở so sánh kiểu dữ liệu
-		Write an example for each case (if any)?
-		+ == là equal to, ví dụ (x == 8)  true nếu x là 8 hoặc "8" (trong javascript tự động cast String sang number)
-		=== là equal value and equal type vd: (x === 8) true chỉ khi x = 8, x = ''8" sẽ trả về false.
-	4. What is different between declaration: `var`, `const` and `let`?
-		+ const dùng để khai báo một hằng số - là một giá trị không thay đổi được trong suốt quá trình chạy
-		+ let tạo ra một biến chỉ có thể truy cập được trong block bao quanh nó.
-		+ var - tạo ra một biến có phạm vi truy cập xuyên suốt function chứa nó.
+  3. What are the differences between `==` and `===`?
+    + Khác nhau ở so sánh kiểu dữ liệu
+    Write an example for each case (if any)?
+    + == là equal to, ví dụ (x == 8)  true nếu x là 8 hoặc "8" (trong javascript tự động cast String sang number)
+    === là equal value and equal type vd: (x === 8) true chỉ khi x = 8, x = ''8" sẽ trả về false.
+    
+  4. What is different between declaration: `var`, `const` and `let`?
+    + const dùng để khai báo một hằng số - là một giá trị không thay đổi được trong suốt quá trình chạy
+    + let tạo ra một biến chỉ có thể truy cập được trong block bao quanh nó.
+    + var - tạo ra một biến có phạm vi truy cập xuyên suốt function chứa nó.
 
 - **Example**
-<body>
-	<script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer>
-		//1. Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum.
-		function sum(a,b) {
-		if (a !== b) {
-		return (a + b);
-		}else{
-		return (3 * (a + b));
-	 }
-	}
-	console.log(sum(5, 10));
-	console.log(sum(5, 5));
-		//2. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19
-		function number(a){
-		if (a > 19) {
-		return (a - 19) *3;
-		}else{
-		 return (19 - a);
-		}
-	}
-	console.log(number(12));
-	console.log(number(19));
-	console.log(number(22));
-		//3. A masked number is a string that consists of digits and one asterisk (*) that should be replaced by exactly one digit. Given a masked number find all the possible options to replace the asterisk with a digit to produce an integer divisible by 3
-			// function string(s) {
-			// let res = s.split("*");
-		 //  var result = [];
-		 //  for (let i = 0; i < 10; i++) {
-		 //    let tmp = (res[0] + i + res[1]);
-		 //    if (tmp % 3 === 0) {
-		 //      result.push(tmp);
-		 //    }
-		 //  }
-		 //  return result;
-			// }
-		 // let result3 = string("12345*7893");
-		 // console.log(result3);
-	</script>
+  <body>
+  <script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer>
+    //1. Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum.
+    function sum(a,b) {
+    if (a !== b) {
+    return (a + b);
+    }else{
+    return (3 * (a + b));
+   }
+  }
+  console.log(sum(5, 10));
+  console.log(sum(5, 5));
+    //2. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19
+    function number(a){
+    if (a > 19) {
+    return (a - 19) *3;
+    }else{
+     return (19 - a);
+    }
+  }
+  console.log(number(12));
+  console.log(number(19));
+  console.log(number(22));
+    //3. A masked number is a string that consists of digits and one asterisk (*) that should be replaced by exactly one digit. Given a masked number find all the possible options to replace the asterisk with a digit to produce an integer divisible by 3
+      // function string(s) {
+      // let res = s.split("*");
+     //  var result = [];
+     //  for (let i = 0; i < 10; i++) {
+     //    let tmp = (res[0] + i + res[1]);
+     //    if (tmp % 3 === 0) {
+     //      result.push(tmp);
+     //    }
+     //  }
+     //  return result;
+      // }
+     // let result3 = string("12345*7893");
+     // console.log(result3);
+  </script>
 </body>
 </html> 
