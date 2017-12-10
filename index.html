@@ -1,190 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Day03</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
 </head>
+# HTML + Javascript Exercise
+
+### Knowledge round-up
+
+- **Javascript**
+
+  1. What are the differences between a variable that is: `null`, `undefined`?
+  	+ Undefined có nghĩa là không xác định. Trong javascript, khi bạn khai báo một biến nhưng chưa gán giá trị cho nó, giá trị của biến đó sẽ là undefined
+  	+ Null có nghĩa là giá trị rỗng hoặc giá trị không tồn tại, nó có thể được sử dụng để gán cho một biến như là một đại diện không có giá trị..
+
+  2. What is `use strict`? what are the advantages and disadvantages to using it?
+  	+ Use strict là từ khóa khai báo sử dụng chế độ Strict Mode, nghĩa là nếu bạn muốn sử dụng chế độ Strict Mode ở đâu thì chỉ việc đặt từ khóa "use strict" ở đó. Chế độ Strict Mode có hai phạm vi sử dụng đó là toàn cục và cục bộ. Tính toàn cục tức là khi bạn đặt từ "use strict" ở ngoài hàm và nằm phía trên cùng của file thì lúc này tất cả các đoạn code bên dưới đều bị ảnh hưởng. Tính cục bộ tức là bạn đặt "use strict" nằm trong một hàm nào đó thì phạm vi ảnh hưởng chỉ nằm trong hàm đó mà thôi.
+  	+Advantages:
+	 	Nó sẽ bắt lỗi mã hoá thông thường, sẽ ném ngoại lệ.
+	 	Nó sẽ hiển thị, cho chúng ta biết và vô hiệu hóa các tính năng được mã hoá kém.
+		+Disadvantages:
+		Nó sẽ không cho phép chúng ta sử dụng câu lệnh "with". Điều này sẽ gây ra các vấn đề về bảo mật và hiệu suất.
+		Nó sẽ không cho phép chúng ta sử dụng thuộc tính "arguments.caller", do mối quan tâm về bảo mậtChúng tôi không có sự thay thế đối với thuộc tính này, nhưng chúng ta có thể mã hóa một tham số bổ sung
+
+
+  3. What are the differences between `==` and `===`?
+		+ Khác nhau ở so sánh kiểu dữ liệu
+   	Write an example for each case (if any)?
+   	+ == là equal to, ví dụ (x == 8)	true nếu x là 8 hoặc "8" (trong javascript tự động cast String sang number)
+		===	là equal value and equal type	vd: (x === 8)	true chỉ khi x = 8, x = ''8" sẽ trả về false.
+  4. What is different between declaration: `var`, `const` and `let`?
+  	+ const dùng để khai báo một hằng số - là một giá trị không thay đổi được trong suốt quá trình chạy
+  	+ let tạo ra một biến chỉ có thể truy cập được trong block bao quanh nó.
+  	+ var - tạo ra một biến có phạm vi truy cập xuyên suốt function chứa nó.
+
+- **Example**
 <body>
-	<header class="header">
-		<div class="headerInner">
-			<a href="#" id="logo"></a>
-			<div class="mainNavRight">
-				<div class="navbar">
-					<div class="navbar-inner">
-						<ul class="nav">
-							<li><a href="#">HOME</a></li>
-							<li><a href="#">ABOUT US</a></li>
-							<li><a href="#">PRODUCT</a></li>
-							<li><a href="#">PROJECT</a></li>
-							<li><a href="#">NEW-EVENT</a></li>
-							<li><a href="#">GALERY</a></li>
-							<li><a href="#">CONTACT</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-	<section class="section-banner">
-		<div class="img-banner">
-			<img src="images/background_1.png" alt="">
-		</div>
-		<div class="title-banner">
-			<h2>QUALITY POLICY</h2>
-			<h1>COMMITMENT TO PRODUCT QUALITY</h1>
-			<h3 class="h3-banner"><a href="">VIEW MORE</a></h3>
-		</div>
-	</section>
-	<section class="section-about">
-		<div class="about">
-			<h2>ABOUT US</h2>
-			<a href="" id="logo2"></a>
-		</div>
-		<div class="statictisContainer">
-		<div class="statictisInner">
-			<div class="stt-row stt-row2">
-				<h3>INTERIOR DESIGN</h3>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-				<img src="images/about1.jpg" alt="">
-				
-			</div>
-			<div class="stt-row stt-row3">
-				<h3>PROVIDED INTERIOR PRODUCT</h3>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-				<img src="images/about2.jpg" alt="">
-			</div>
-			<div class="stt-row stt-row4">
-				<h3>POLICY QUALYTY</h3>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-				<img src="images/about3.jpg" alt="">
-			</div>
-		</div>
-	</section>
-	<section class="section-product">
-    <div class="container">
-      <h2>PRODUCT</h2>
-      <img class="section-icon" src="images/icon1.png" alt="">
-       </div>
-      <div class="product-menu">
-        <ul class="nav1">
-          <li><a href="#">Wood</a></li>
-          <li><a href="#">Led Light</a></li>
-          <li><a href="#">Curtain</a></li>
-          <li><a href="#">Wood Floor</a></li>
-          <li><a href="#">Wallpaper</a></li>
-          <li><a href="#">Carpet</a></li>
-        </ul>
-    </div>
-    <div class="product-img">
-      <ul>
-        <li><img src="images/pro1.jpg"></li>
-        <li><img src="images/pro2.jpg"></li>
-        <li><img src="images/pro3.jpg"></li>
-        <li><img src="images/pro4.jpg"></li>
-        <li><img src="images/pro5.jpg"></li>
-        <li><img src="images/pro6.jpg"></li>
-        <li><img src="images/pro7.jpg"></li>
-        <li><img src="images/pro8.jpg"></li>
-        <li><img src="images/pro9.jpg"></li>
-      </ul>
-    </div>
-    <div class="viewall">
-      <a href="">VIEW ALL</a>
-    </div>
-  </section>
-  <section class="project">
-    <div class="container">
-      <h2>PROJECT</h2>
-      <img class="section-icon" src="images/icon1.png" alt="">
-      <nav class="project-menu1">
-        <ul>
-          <li><a href="#">MODERN</a></li>
-          <li><a href="#">UTILITIES</a></li>
-          <li><a href="#">CLASSIC</a></li>
-        </ul>
-      </nav>
-      <div class="content">
-        <div class="group-content">
-          <ul class="ul-project">
-          	<li><img src="images/img1.jpg"></li>
-          	<li><img src="images/img2.jpg"></li>
-            <li><img src="images/img3.jpg"></li>
-            <li><img src="images/img4.jpg"></li>
-            <li><img src="images/img5.jpg"></li>
-            <li><img src="images/img6.jpg"></li>
-            <li><img src="images/img7.jpg"></li>
-            <li><img src="images/img8.jpg"></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section-event">
-    <div class="container">
-      <h3>NEW-EVENTS</h3>
-      <img class="event-icon" src="images/event1.png" alt="">
-      <div class="content">
-        <article class="event1">
-          <img src="images/new_1.jpg">
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda nemo nesciunt ut dolore ducimus quibusdam, blanditiis? Rem optio nostrum amet odio, delectus.</p>
-        </article>
-        <article class="event1">
-          <img src="images/event2.jpg">
-          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda nemo nesciunt ut dolore ducimus quibusdam, blanditiis? Rem optio nostrum amet odio, delectus.</p>
-        </article>
-        <article class="event1">
-            <img src="images/event3.jpg">
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda nemo nesciunt ut dolore ducimus quibusdam, blanditiis? Rem optio nostrum amet odio, delectus.</p>
-          </article>
-      </div>
-    </div>
-  </section>
-  <section class="gallery">
-      <div class="container">
-        <h3>GALLERY</h3>
-        <img class="section-icon" src="images/icon_logo.png" alt="">
-        <div class="content">
-          <article class="gallery-content">
-            <img src="images/gallery_1.jpg">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda nemo nesciunt ut dolore ducimus quibusdam, blanditiis? Rem optio nostrum amet odio, delectus.</p>
-          </article>
-          <article class="gallery-content">
-            <img src="images/gallery_2.jpg">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda nemo nesciunt ut dolore ducimus quibusdam, blanditiis? Rem optio nostrum amet odio, delectus.</p>
-          </article>
-          <article class="gallery-content">
-            <img src="images/gallery_3.jpg">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda nemo nesciunt ut dolore ducimus quibusdam, blanditiis? Rem optio nostrum amet odio, delectus.</p>
-          </article>
-          <article class="gallery-content">
-              <img src="images/gallery_4.jpg">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda nemo nesciunt ut dolore ducimus quibusdam, blanditiis? Rem optio nostrum amet odio, delectus.</p>
-            </article>
-        </div>
-      </div>
-    </section>
-    <section class="section-map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.114804338169!2d108.18213201467897!3d16.059531243963896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421904281b6fa1%3A0xef36b4026f6b9a9!2zUGjhuqduIEzEg25nIDgsIFRoYW5oIEtow6osIMSQw6AgTuG6tW5nLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1512516081915"> </iframe>
-      <div>
-        <h3>CONTACT WITH US</h3>
-      </div>
-    </section>
-    <footer>
-        <div class="footer-left">
-        	<p>Please enter your mobiphone bellow</p>
-        	<input type="text" value="" name="" placeholder="Name">
-        	<input type="number" name="" value="" placeholder="Phone Number">
-        	<input type="textarea" name="" value="" placeholder="Content">
-        </div>
-        <div class="footer-right">
-        	<h4>COMPANY INTERIOR DESIGN</h4>
-        	<p>interne design</p>
-        	<p>Addres: 109 Nguyen hien, Son tra</p>
-        	<p>Phone:0127069</p>
-        </div>
-    </footer>
+	<script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer>
+		//1. Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum.
+		function sum(a,b) {
+  	if (a !== b) {
+    return (a + b);
+    }else{
+    return (3 * (a + b));
+   }
+ 	}
+	console.log(sum(5, 10));
+	console.log(sum(5, 5));
+		//2. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19
+		function number(a){
+  	if (a > 19) {
+    return (a - 19) *3;
+    }else{
+     return (19 - a);
+    }
+	}
+	console.log(number(12));
+	console.log(number(19));
+	console.log(number(22));
+	  //3. A masked number is a string that consists of digits and one asterisk (*) that should be replaced by exactly one digit. Given a masked number find all the possible options to replace the asterisk with a digit to produce an integer divisible by 3
+	    // function string(s) {
+	    // let res = s.split("*");
+     //  var result = [];
+     //  for (let i = 0; i < 10; i++) {
+     //    let tmp = (res[0] + i + res[1]);
+     //    if (tmp % 3 === 0) {
+     //      result.push(tmp);
+     //    }
+     //  }
+     //  return result;
+    	// }
+     // let result3 = string("12345*7893");
+     // console.log(result3);
+	</script>
 </body>
-</html> 
+</html>
