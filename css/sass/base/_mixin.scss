@@ -1,0 +1,25 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin clearfix() {
+  &:before,
+  &:after{
+    content: " "; 
+    display: table; 
+  }
+
+  &:after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+  }
+  &{
+    *zoom: 1;
+  }
+}

@@ -1,0 +1,23 @@
+header{
+  img{
+    margin: 8px 0px 0px 0px;
+  }
+  .nav-lists{
+    margin-top: 12px;
+    float:right;
+    .nav-item{
+      display: inline;
+    }
+    .nav-item::after{
+      content: ".";
+      font-size: 45px;
+      color: $primary;
+      position: relative;
+      bottom: 3px;
+      padding: 0px 9px 0px;
+    }
+    .nav-item:last-child::after{
+      content:'';
+    }
+  }
+}

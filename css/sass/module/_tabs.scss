@@ -1,0 +1,13 @@
+.tabs{
+  .tabs-item{
+    display: inline;
+    a{
+      font-family: $primary-font;
+      padding: 10px 15px 10px;
+      border-radius: 3px;
+      text-decoration: none;
+      color:$textColor;
+      font-size: 14px;
+    }
+  }
+}

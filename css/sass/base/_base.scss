@@ -1,0 +1,32 @@
+h1{
+  font-size: 42px;
+  font-weight: 900;
+  color: $white;
+  font-family: $primary-font;
+}
+.container{
+  max-width: 1240px;
+  height: 80px;
+  margin: 0px auto;
+  .section-title{
+    text-align: center;
+    padding: 100px 0px 40px;
+    h2{
+      font-size: 32px;
+      font-weight: bold;
+      font-family: $primary-font;
+    }
+    img{
+      padding: 17px 0px;
+      ::before{
+        content: '';
+        width: 100%;
+        border-bottom: solid 1px green;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        z-index: 1;
+      }
+    }
+  }
+}

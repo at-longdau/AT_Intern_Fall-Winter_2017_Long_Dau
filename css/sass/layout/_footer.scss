@@ -1,0 +1,16 @@
+footer{
+  line-height: 5;
+  background-color: $secondary;
+  p:last-child{
+    float:right;
+  }
+  p{
+    font-family: $primary-font;
+    font-size: 14px;
+    display: inline;
+    color:$footerText;
+    span{
+      color:$primary;
+    }
+  }
+}

@@ -1,0 +1,183 @@
+.section-banner{
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  max-height: 100%;
+  max-width: 100%;
+  height: 772px;
+  div{
+    margin: auto;
+    text-align: center;
+    line-height: 5em;
+    position: relative;
+    top: 33%;
+    h2{
+      font-size: 24px;
+      color: $white;
+    }
+    a{
+      text-decoration: none;
+      padding: 10px 25px 10px;
+      border: solid 2px $white;
+      color: $white;
+      @include border-radius(3px);
+    }
+  }
+}
+// about us
+.section-aboutus{
+  background-color: $aboutBackground;
+  height: 672px;
+  .aboutus-lists{
+    .aboutus-item{
+      margin-left: 4px;
+      float: left;
+      width: 33%;
+      line-height: 27px;
+      h3{
+        font-weight: bold;
+        font-size: 20px;
+        span{
+          color:$primary;
+        }
+        font-family: $primary-font;
+      }
+      p{
+        padding: 15px 0px 15px;
+        font-family: $primary-font;
+        font-size: 14px;
+      }
+    }
+  }
+  .span{
+    font-weight: 900;
+  }
+  @include clearfix();
+}
+// product
+.section-product{
+  .products-lists{
+    margin-top: 145px;
+    .products-item{
+      float: left;
+      margin: -2px -3px -1px -2px;
+    }
+  }
+  .viewall{
+    background: $viewallBackground;
+    text-align: center;
+    a{
+      line-height: 7em;
+      text-decoration: none;
+      color:$white;
+      border: solid 2px $white;
+      padding: 10px 50px 10px;
+      @include border-radius(3px);
+    }
+  }
+  @include clearfix();
+}
+// project
+.section-project{
+  background-color: $aboutBackground;
+  padding-bottom: 100px;
+  .project-lists{
+    .project-item{
+      margin-left: 4px;
+      float: left;
+      width: 24%;
+      line-height: 27px;
+      margin: 0px 0px 11px 12px;
+    }
+  }
+  .span{
+    font-weight: 900;
+  }
+  @include clearfix();
+}
+// new-event
+.section-newevent{
+  height: 643px;
+  background-image: url('../images/event-bg.jpg');
+  h2{
+    color:$white;
+  }
+  .newevent-lists{
+    .newevent-item{
+      margin-left: 4px;
+      float: left;
+      width: 33%;
+      p:first-child{
+        font-weight: bold;
+      }
+      p{
+        padding: 10px 0px 10px;
+        color:$white;
+        font-family: $primary-font;
+      }
+    }
+  }
+  .span{
+    font-weight: 900;
+  }
+  @include clearfix();
+}
+// gallery
+.section-gallery{
+  padding-bottom: 80px;
+  .gallery-lists{
+    .gallery-item{
+      margin-left: 12px;
+      float: left;
+      width: 24%;
+      p{
+        padding: 10px 0px;
+        font-family: $primary-font;
+      }
+    }
+  }
+  .span{
+    font-weight: 900;
+  }
+  @include clearfix();
+}
+.section-map{
+  @include clearfix();
+}
+.section-contact{
+  > div:first-child{
+    line-height: 5em;
+    text-align: center;
+    background: $viewallBackground;
+    margin-bottom: 60px;
+    h2{
+      font-size: 24px;
+      font-family: $primary-font;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+  .contact-component{
+    float: left;
+    width: 50%;
+  }
+  .contact-form{
+    span{
+      color: $textColor;
+      font-family: $secondary-font;
+      font-style: italic;
+    }
+    input, textarea{
+      width: 90%;
+      margin: 10px 0px;
+      padding: 9px 15px;
+      @include border-radius(3px);
+      border: solid 1px silver;
+    }
+  }
+  .contact-info{
+    p:first-child{
+      color: $contactColor;
+    }
+  }
+  @include clearfix();
+}
