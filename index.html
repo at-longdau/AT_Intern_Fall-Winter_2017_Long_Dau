@@ -1,0 +1,74 @@
+# Javascript Exercise
+
+### Knowledge round-up
+
+- **Javascript**
+1. What are the differences between `function declaration` and `function expressions`?
+  Function declaration thì có thể gọi trước khi khai báo hoặc sau khi khai báo đều được, còn function expression thì phải có trình tự
+2. What is `parameters` in function using for?
+  Parameter được gọi là tham số và nó được dùng trong khi chúng ta khai báo, định nghĩa hàm
+3. Is there a max number of arguments javascript functions can accept? Check reference link to understand this one.
+
+### Playground
+1. Write a JavaScript function which accepts an argument and returns the type.
+Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
+function checktype(value) {
+    return typeof value;
+}
+console.log(checktype(12));
+console.log(checktype('aaaaa'));
+console.log(checktype(abc));
+2. Write a JavaScript function to extract unique characters from a string.
+function Unique(str) {
+  return String.prototype.concat(...new Set(str))
+}
+console.log(Unique('axxxxx'));
+3. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
+function titleCase(str) {
+    return str.charAt(0).toUpperCase() + str.substring(1).toLowerCase();
+}
+4. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string.
+function countchar(str,letter) {
+ var letter_Count = 0;
+ for (var position = 0;length = arr.length; position < length; position ++) {
+    if (str.charAt(position) == letter) {
+      letter_Count += 1;
+      }
+  }
+  return letter_Count;
+}
+
+console.log(countchar('axxx', 'o'));
+5. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
